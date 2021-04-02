@@ -35,7 +35,6 @@ class UserController extends Controller
         }
 
         $users->save();
-
         return view('users')->with('users', $users);
     }
 
