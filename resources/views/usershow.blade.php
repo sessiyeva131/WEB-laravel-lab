@@ -31,6 +31,7 @@
                 <td> <img src="{{ asset('uploads/user/' . $user->image) }}" alt="Image" width="100" height="100"></td>
                 </tr>
                 @endforeach
+                
             </tbody>
             </table>
         </div>
