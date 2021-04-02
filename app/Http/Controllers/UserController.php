@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Users;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\WelcomeMail;
 
 class UserController extends Controller
 {
@@ -35,6 +37,8 @@ class UserController extends Controller
         }
 
         $users->save();
+
+        Mail::to('test@test.com')->send(new WelcomeMail());
         return view('users')->with('users', $users);
     }
 
