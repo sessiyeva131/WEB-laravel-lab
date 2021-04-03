@@ -1,11 +1,7 @@
 @component('mail::message')
-# Introduction
+# Welcome to Laravel
 
-The body of your message.
-
-@component('mail::button', ['url' => ''])
-Button Text
-@endcomponent
+Testing email sending
 
 Thanks,<br>
 {{ config('app.name') }}
