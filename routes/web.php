@@ -24,7 +24,13 @@ Route::get('/users', 'App\Http\Controllers\UserController@index');
 Route::post('/addUser', 'App\Http\Controllers\UserController@store')->name('addUser');
 Route::get('/users/display', 'App\Http\Controllers\UserController@display');
 
-Route::get('/email', function(){
-    Mail::to('example@example.com')->send(new WelcomeMail());
-    return new WelcomeMail();
-});
+// Route::get('/email', function(){
+//     $data = [
+//         'title' => 'Welcome!',
+//         'body' => 'Works!!!'
+//     ];
+//     Mail::to('sessiyeva@gmail.com')->send(new \App\Mail\TestMail($data));
+//     echo "Works";
+// });
+
+
