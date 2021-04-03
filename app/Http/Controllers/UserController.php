@@ -38,7 +38,7 @@ class UserController extends Controller
 
         $users->save();
 
-        Mail::to('test@test.com')->send(new WelcomeMail());
+        Mail::to($users->email)->send(new WelcomeMail());
         return view('users')->with('users', $users);
     }
 
